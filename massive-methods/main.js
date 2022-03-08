@@ -40,7 +40,9 @@ console.log(copyPeople)
 // console.log(newPeople)
 
 const newMapPeople = people.map(person =>`${person.name} (age: ${person.age})`)
+const newMapPeople1 = people.map(person =>{return (person)})
 console.log(newMapPeople)
+console.log(newMapPeople1)
 
 
 //filter

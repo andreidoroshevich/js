@@ -1,7 +1,8 @@
 console.log(typeof {})
 console.log(typeof [])
-console.log(Array.isArray([]) )
-console.log(typeof (()=>{}))
+console.log(Array.isArray([]))
+console.log(typeof (() => {
+}))
 
 
 // const bob = {
@@ -16,7 +17,6 @@ console.log(typeof (()=>{}))
 // ted.name = "Ted"
 // console.log(ted)
 // console.log(bob)
-
 
 
 //способы создания нового объекта
@@ -61,8 +61,25 @@ console.log(donald)
 // 1. Написать функцию копирования простого объекта с помощью цикла for-in
 // 2. Написать рекурсивную функцию копирования сложного объекта
 
-// Обязательно к завтрашнему дню:
 
+const people = [
+    {name: "Andrew Ivanov", age: 33, budget: 50000},
+    {name: "Alexander Petrov", age: 24, budget: 500},
+    {name: "Dmitry Sidorov", age: 18, budget: 4000},
+    {name: "Vasya Petrov", age: 24, budget: 40},
+]
+
+
+function newArr(array) {
+    const newArray = [];
+    for (let person of array) {
+        newArray.push(person);
+    }
+    return newArray;
+}
+
+console.log(newArr(people))
+console.log(people === newArr(people)) //false
 
 
 
