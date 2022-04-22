@@ -132,7 +132,7 @@ array.forEach((item, index, array) => {
 let array1 = [5, 3, 8, 1];
 
 function filterRange(arr, a, b) {
-  return  array1.filter(el=>el>=a && el<=b)
+    return array1.filter(el => el >= a && el <= b)
 }
 
 
@@ -143,18 +143,37 @@ console.log(array1)
 
 let arr1 = [5, 2, 1, -10, 8]
 
-arr1.sort((a,b)=>b-a)
+arr1.sort((a, b) => b - a)
 console.log(arr1)
 
 
-let arr2= ["HTML", "JavaScript", "CSS"];
+let arr2 = ["HTML", "JavaScript", "CSS"];
 
-function copySorted(arr){
-   let newArr2=[...arr]
-  return  newArr2.sort()
+function copySorted(arr) {
+    let newArr2 = [...arr]
+    return newArr2.sort()
 }
 
 let sorted = copySorted(arr2)
 
 console.log(sorted)
 console.log(arr2)
+
+
+function gimme(triplet) {
+    // let newArr=[...triplet]
+    // let sortedArr = newArr.sort((a, b) => a - b)
+    // let middleElem = sortedArr[1]
+    // let indexMiddleElem = triplet.indexOf(middleElem)
+    // return indexMiddleElem
+
+    return triplet.indexOf([...triplet].sort((a, b) => a - b)[1])
+}
+
+console.log(gimme([2, 1, 3]))
+
+function longest(s1, s2) {
+    return [...new Set(s1.split('').concat(s2.split('')))].sort().join('')
+}
+
+console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"))
